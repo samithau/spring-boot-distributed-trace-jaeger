@@ -27,7 +27,7 @@ public class Controller {
     public ResponseEntity<String>  path1() {
 
         logger.info("Incoming request at {} for request /path1 ", applicationName);
-        String response = restTemplate.getForObject("http://localhost:8090/hello/path2", String.class);
+        String response = restTemplate.getForObject("http://spring-boot-distributed-trace-jaeger-3-apps-demo.apps.daffy-xgp4lehy.cloud.techzone.ibm.com:8080/hello/path2", String.class);
         return ResponseEntity.ok("response from /path1 + " + response);
     }
 
